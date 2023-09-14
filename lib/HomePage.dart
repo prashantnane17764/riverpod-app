@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:printing/printing.dart';
+import 'package:river_pod_app/pdf/pdfPreview.dart';
 
 import './add_todo.dart';
 import './todo_list.dart';
@@ -19,7 +21,7 @@ int _selectedIndex = 0;
 List<Widget> _widgets = <Widget>[
   AddTodo(),
   TodoList(),
-  Text('Delete Page'),
+  PdfPreviewPage(),
 ];
 
 class _HomePageState extends ConsumerState<HomePage> {
